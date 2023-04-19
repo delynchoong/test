@@ -1,5 +1,4 @@
 ﻿@using cosmosdb_chatgpt.Services
-@inject AuthenticationStateProvider AuthenticationStateProvider
 @inject ChatService chatService
 <div class="sidebar h-100 d-flex flex-column">
 
@@ -76,7 +75,6 @@
 
 
 @code {
-    [CascadingParameter] Task<AuthenticationState> authenticationStateTask { get; set; }
     [Parameter]
     public EventCallback<ChatSession> OnChatClicked { get; set; }
 
